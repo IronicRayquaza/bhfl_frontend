@@ -1,0 +1,51 @@
+.response-container {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+  }
+  
+  .response-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  
+  .response-container pre {
+    background-color: rgba(43, 43, 43, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .response-container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .response-container h2 {
+      font-size: 1.3rem;
+    }
+  
+    .response-container pre {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  }
+  

@@ -1,4 +1,5 @@
 import React from "react";
+import "./MultiSelectDropdown.css";
 
 const MultiSelectDropdown = ({ setSelectedFilters }) => {
   const options = ["Alphabets", "Numbers", "Highest Alphabet"];
