@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import MultiSelectDropdown from "./components/MultiSelectDropdown";
 import ResponseDisplay from "./components/ResponseDisplay";
+import "./App.css";
 
 const API_URL = "https://bhfl-api-one.vercel.app/bfhl";  // Ensure it's correct
  
