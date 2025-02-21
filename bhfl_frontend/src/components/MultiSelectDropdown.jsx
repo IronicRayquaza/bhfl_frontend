@@ -1,22 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MultiSelectDropdown.css";
 
 const MultiSelectDropdown = ({ setSelectedFilters }) => {
   const options = ["Alphabets", "Numbers", "Highest Alphabet"];
+  const [selectedValues, setSelectedValues] = useState([]);
 
   const handleChange = (event) => {
-    const selectedValues = Array.from(event.target.selectedOptions, (option) => option.value);
-    setSelectedFilters(selectedValues);
+    const value = event.target.value;
+    let updatedValues;
+
+    if (selectedValues.includes(value)) {
+      updatedValues = selectedValues.filter((item) => item !== value);
+    } else {
+      updatedValues = [...selectedValues, value];
+    }
+
+    setSelectedValues(updatedValues);
+    setSelectedFilters(updatedValues);
   };
 
   return (
-    <select multiple onChange={handleChange}>
-      {options.map((option) => (
-        <option key={option} value={option}>
-          {option}
-        </option>
-      ))}
-    </select>
+    <div className="dropdown-container">
+      <select multiple className="dropdown-select">
+        {options.map((option) => (
+          <option key={option} value={option} onClick={handleChange} selected={selectedValues.includes(option)}>
+            {option}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 
